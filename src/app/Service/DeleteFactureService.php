@@ -16,6 +16,8 @@ $sql3 = "DELETE FROM facture WHERE NUMFACTURE = '$Num_Facture'";
 
 $result = mysqli_query($conn, $sql3);
 
+unlink('../uploadFiles/'.$Num_Facture.'.pdf');
+
 // Execute the prepared statement
 if ($depenseResult && $result) {
     header('Location: ../Views/EspaceFournisseur/Facture.php');

@@ -220,27 +220,21 @@ if (!(isset($_SESSION['IDA']))) {
                             <table class="w-full whitespace-no-wrap">
                                 <thead>
                                     <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b">
-                                        <th class="px-4 py-3">CIN</th>
                                         <th class="px-4 py-3">Nom</th>
                                         <th class="px-4 py-3">Prénom</th>
                                         <th class="px-4 py-3">Email</th>
                                         <th class="px-4 py-3">Phone</th>
-                                        <th class="px-4 py-3">Fax</th>
+                                        <th class="px-4 py-3">Entreprise</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y">
 
                                     <?php
-                                    $results = mysqli_query($conn, "SELECT * FROM fournisseur");
+                                    $results = mysqli_query($conn, "SELECT fournisseur.IDFOURNISSEUR, fournisseur.NOM, fournisseur.PRENOM, fournisseur.EMAIL, fournisseur.PHONE, entreprise.NOM, entreprise.FORMEJURIDIQUE FROM fournisseur, entreprise WHERE fournisseur.IDFOURNISSEUR = entreprise.IDFOURNISSEUR");
 
                                     while ($ligne = mysqli_fetch_row($results)) {
                                     ?>
                                         <tr class="text-gray-700" onclick="window.location='InfoFournisseur.php?idFournisseur=<?php echo $ligne[0]; ?>';">
-                                            <td class="px-4 py-3">
-                                                <div class="flex items-center text-sm font-semibold">
-                                                    <?php echo $ligne[0]; ?>
-                                                </div>
-                                            </td>
                                             <td class="px-4 py-3 text-sm">
                                                 <?php echo $ligne[1]; ?>
                                             </td>
@@ -254,7 +248,9 @@ if (!(isset($_SESSION['IDA']))) {
                                                 <?php echo $ligne[4]; ?>
                                             </td>
                                             <td class="px-4 py-3 text-sm">
-                                                <?php echo $ligne[6]; ?>
+                                                <div class="flex items-center text-sm font-semibold">
+                                                    <?php echo $ligne[5].' ('.$ligne[6].')'; ?>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php

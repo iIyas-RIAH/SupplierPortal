@@ -6,9 +6,10 @@ session_start();
 
 $Num_Facture = $_GET['idFacture'];
 
+$Date_Valide = date("Y-m-d");
 
 if (isset($_SESSION['IDA'])) {
-    $sql = "UPDATE facture SET VALIDÉADMIN = true WHERE NUMFACTURE = '$Num_Facture'";
+    $sql = "UPDATE facture SET VALIDÉADMIN = true, ETATFACTURE = 'Validée', DATEVALIDE = '$Date_Valide' WHERE NUMFACTURE = '$Num_Facture'";
 } else {
     $sql = "UPDATE facture SET VALIDÉFOURNISSEUR = true WHERE NUMFACTURE = '$Num_Facture'";
 }
