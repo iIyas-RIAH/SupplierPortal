@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>ONHYM Supplier Portal</title>
+  <meta name="title" content="ONHYM">
+  <meta name="description" content="This is the ONHYM Supplier Portal website made by DSI-ONHYM">
+
+  <!-- 
+    - icon
+  -->
+  <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - tailwindcss
+  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dropdown.css">
+  <link rel="stylesheet" href="../assets/css/css.css">
+
+
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/navbar-bg.jpg">
+
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header px-44" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img src="../assets/images/logo-ONHYM.png" width="290" alt="Logo ONHYM" class="logo-light">
+
+        <img src="../assets/images/logo-ONHYM.png" width="265" alt="Logo ONHYM" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link" style="color: hsla(218, 22%, 26%, 1);">ACCUEIL</a>
+          </li>
+
+          <li>
+            <a href="https://www.onhym.com/fr" target="_blank" class="navbar-link"
+              style="color: hsla(218, 22%, 26%, 1);">SITE WEB ONHYM</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link" style="color: hsla(218, 22%, 26%, 1);">OPPORTUNITÉS ONHYM</a>
+          </li>
+
+          <li>
+            <a href="https://www.onhym.com/fr/contact" target="_blank" class="navbar-link"
+              style="color: hsla(218, 22%, 26%, 1);">CONTACT</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:info@email.com" class="contact-link">info@email.com</a>
+
+          <a href="tel:+212 5 37 23 98 98" class="contact-link">+212 5 37 23 98 98</a>
+        </div>
+
+      </nav>
+
+      <a href="Auth/login.php" class="btn-about">DEVENIR FOURNISSEUR</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+  <main class="bg-gray-200">
+
+    <div class="mt-48 py-80 bg-purple-500 bg-opacity-50" style="background-image: url('../assets/images/about.jpg'); ">
+      <h1 class="text-white text-6xl font-bold pl-56">Opportunités ONHYM</h1>
+    </div>
+
+
+
+    <div class="grid grid-cols-3 gap-20 pt-24">
+
+      <div class="w-max pl-24 pt-4 md:w-90">
+        <div class="space-y-2">
+          <h3 class="text-white bg-purple-500 text-4xl px-20 py-6 text-center font-bold">58 Opportunités</h3>
+        </div>
+        <div class=" bg-white border px-20 pb-20 pt-10">
+
+
+          <div class="space-y-2">
+            <input
+              class="block w-full h-14 mt-3 mb-10 p-2 text-md md:border-2 focus:border-black focus:outline-black focus:shadow-md form-input bg-gray-200"
+              placeholder="Recherche par mot clé" type="text" />
+          </div>
+
+          <div class="side-container">
+            <ul>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown">Premier Menu <i class="icon-arrow"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown">Deuxieme Menu <i class="icon-arrow"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown">Troisieme Menu <i class="icon-arrow"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="view_wrap list-view col-span-2 pb-28 pr-14">
+        <div class="view_item">
+          <div class="vi_right">
+            <p class="text-4xl my-3 font-bold">Services logistiques</p>
+            <p class="content my-4"><b class="text-3xl">Objet: </b>Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
+            <a href="offreDetails.html" class="btn">Détails</a>
+          </div>
+        </div>
+        <div class="view_item">
+          <div class="vi_right">
+            <p class="text-4xl my-3 font-bold">EPI et vêtements de travail</p>
+            <p class="content my-4"><b class="text-3xl">Objet: </b>Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
+            <div class="btn">Détails</div>
+          </div>
+        </div>
+        <div class="view_item">
+          <div class="vi_right">
+            <p class="text-4xl my-3 font-bold">Logiciels et Progiciels</p>
+            <p class="content my-4"><b class="text-3xl">Objet: </b>Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
+            <div class="btn">Détails</div>
+          </div>
+        </div>
+        <div class="view_item">
+          <div class="vi_right">
+            <p class="text-4xl my-3 font-bold">Gaz industriels</p>
+            <p class="content my-4"><b class="text-3xl">Objet: </b>Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
+            <div class="btn">Détails</div>
+          </div>
+        </div>
+        <div class="view_item">
+          <div class="vi_right">
+            <p class="text-4xl my-3 font-bold">Nettoyage industriel</p>
+            <p class="content my-4"><b class="text-3xl">Objet: </b>Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
+            <div class="btn">Détails</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer px-44">
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo-ONHYM.png" width="290" alt="Logo ONHYM">
+        </a>
+
+        <p class="footer-text">
+          &copy; Office National des Hydrocarbures <br> et des Mines 2022
+        </p>
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Restez en Contact</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            5 Avenue Moulay Hassan BP99, Rabat, Maroc.
+          </address>
+        </li>
+
+        <li>
+          <a href="mailto:info@email.com" class="footer-link">info@email.com</a>
+        </li>
+
+        <li>
+          <a href="tel:+212 5 37 23 98 98" class="footer-link">+212 5 37 23 98 98</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Nos Services</p>
+        </li>
+
+        <li>
+          <a href="https://www.onhym.com/fr" target="_blank" class="footer-link">ONHYM</a>
+        </li>
+
+        <li>
+          <a href="https://www.onhym.com/fr/mineral-processing" target="_blank" class="footer-link">Présentation</a>
+        </li>
+
+        <li>
+          <a href="https://www.onhym.com/fr/liens-utiles" target="_blank" class="footer-link">Liens Utiles</a>
+        </li>
+
+        <li>
+          <a href="https://www.onhym.com/fr/conditions-dutilisation" target="_blank" class="footer-link">Conditions
+            d’utilisation</a>
+        </li>
+
+      </ul>
+
+      <div class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Nos Réseaux</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">facebook</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">twitter</a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/company/onhym/" target="_blank" class="footer-link">linkedin</a>
+        </li>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/dropdown.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.emd.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
