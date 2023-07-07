@@ -226,7 +226,7 @@ if (!(isset($_SESSION['IDFOURNISSEUR']))) {
                                 <div>
                                     <h4 class="py-4">NUM DEPENSE</h4>
                                     <select class="w-11/12 rounded-lg border-2 border-black px-3 text-gray-700 h-10" name="Num_Depense" required>
-                                    <?php
+                                        <?php
                                         while ($d = mysqli_fetch_row($depense)) {
                                         ?>
                                             <option value="<?php echo $d[0]; ?>" <?php echo ($d[0] == $facture[2]) ? "selected" : "" ?>><?php echo $d[0]; ?></option>
@@ -304,6 +304,14 @@ if (!(isset($_SESSION['IDFOURNISSEUR']))) {
                                         <option value="NON" <?php echo ($facture[15] == false) ? "selected" : "" ?>>NON</option>
                                     </select>
                                 </div>
+
+                                <?php
+                                if ($facture[3] == 'Rejetée') { ?>
+                                    <div class="col-span-2" style="width: 96%;">
+                                        <h4 class="py-4">Motif</h4>
+                                        <textarea name="Motif" class="w-full py-3 text-lg leading-relaxed rounded-lg border-2 border-black px-3 text-gray-700" rows="3" readonly><?php echo $facture[16]; ?></textarea>
+                                    </div>
+                                <?php } ?>
 
                                 <input type="hidden" name="Fournisseur" value="<?php echo $IDFOURNISSEUR; ?>">
 

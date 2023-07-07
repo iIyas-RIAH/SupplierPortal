@@ -219,7 +219,7 @@ if (!(isset($_SESSION['IDA']))) {
                         Mon Dashboard
                     </h2>
 
-                    <div class="w-full pb-14 pt-3 px-6">
+                    <div class="pb-14 pt-3 px-6" style="width: 99%;">
                         <!-- Profile tab -->
                         <!-- About Section -->
                         <div class="bg-white px-4 shadow-md rounded-md py-4">
@@ -257,7 +257,7 @@ if (!(isset($_SESSION['IDA']))) {
                                             <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
 
                                                 <?php
-                                                $results = mysqli_query($conn, "SELECT * FROM facture WHERE VALIDÉFOURNISSEUR = false order by NUMDEPENSE");
+                                                $results = mysqli_query($conn, "SELECT * FROM facture WHERE VALIDÉFOURNISSEUR = true and VALIDÉADMIN = false order by NUMDEPENSE");
 
                                                 while ($ligne = mysqli_fetch_row($results)) {
                                                 ?>
@@ -390,6 +390,13 @@ while ($ligne = mysqli_fetch_row($results)) {
                 borderColor: "blue",
                 borderWidth: 1,
                 data: FM
+            },            
+            {
+                label: "Factures Validées",
+                backgroundColor: "lightgreen",
+                borderColor: "green",
+                borderWidth: 1,
+                data: Validé
             },
             {
                 label: "Factures Rejetées",
@@ -397,13 +404,6 @@ while ($ligne = mysqli_fetch_row($results)) {
                 borderColor: "red",
                 borderWidth: 1,
                 data: Rejeté
-            },
-            {
-                label: "Factures Validées",
-                backgroundColor: "lightgreen",
-                borderColor: "green",
-                borderWidth: 1,
-                data: Validé
             }
         ]
     };

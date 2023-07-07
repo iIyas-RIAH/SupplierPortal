@@ -16,7 +16,6 @@ $Date_Valide = $_POST['Date_Valide'];
 $Date_Rejete = $_POST['Date_Rejete'];
 $Date_Traitement = $_POST['Date_Traitement'];
 $Date_Paye = $_POST['Date_Paye'];
-$Validé = $_POST['Validé'];
 $Motif = $_POST['Motif'] ?? null;
 
 switch ($Etat_Facture) {
@@ -39,7 +38,7 @@ switch ($Etat_Facture) {
 
 $sql = "UPDATE facture SET IDFOURNISSEUR ='$Fournisseur', NUMDEPENSE ='$Num_Depense', ETATFACTURE ='$Etat_Facture', DEVISE ='$Devise',
  DATEFACTURE ='$Date_Facture', MONTANTHT ='$Montant_HT', MONTANTTTC ='$Montant_TTC', DATEDEPOSE ='$Date_Depose', DATEVALIDE ='$Date_Valide',
- DATEREJETE ='$Date_Rejete', DATETRAITEMENT ='$Date_Traitement', DATEPAYE ='$Date_Paye', VALIDÉFOURNISSEUR ='$Validé', MOTIF ='$Motif' WHERE NUMFACTURE ='$Num_Facture'";
+ DATEREJETE ='$Date_Rejete', DATETRAITEMENT ='$Date_Traitement', DATEPAYE ='$Date_Paye', MOTIF ='$Motif' WHERE NUMFACTURE ='$Num_Facture'";
 
 $result = setRow($sql, $conn);
 

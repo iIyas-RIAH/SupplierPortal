@@ -300,11 +300,11 @@ if (!(isset($_SESSION['IDA']))) {
 
                                 <div>
                                     <h4 class="py-4">VALIDÉ PAR FOURNISSEUR</h4>
-                                    <input class="w-11/12 rounded-lg border-2 border-black px-3 text-gray-700 h-10" type="text" name="Validé" value="<?php echo $validé = $facture[15] ? "OUI" : "NON"; ?>" readonly>
+                                    <input class="w-11/12 rounded-lg border-2 border-black px-3 text-gray-700 h-10" type="text" name="Validé" value="<?php echo $validé = $facture[14] ? "OUI" : "NON"; ?>" readonly>
                                 </div>
 
                                 <input type="hidden" name="admin" value="<?php echo $admin; ?>">
-                                <input type="hidden" id="myInput" name="Motif" value="<?php echo $admin; ?>">
+                                <input type="hidden" id="myInput" name="Motif">
 
 
                                 <div class="modal hidden" tabindex="-1" role="dialog" onclick="setValue()">
@@ -324,9 +324,16 @@ if (!(isset($_SESSION['IDA']))) {
 
                             </form>
                             <div class="flex justify-center pt-5">
-                                <button class="block w-5/12 px-4 py-2 my-4 mx-4 text-lg font-medium leading-5 text-center text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-purple" type="submit" onclick="toggleModal('modal-validation-facture')">
-                                    Valider
-                                </button>
+                                <?php
+                                if (!$facture[15]) { ?>
+                                    <button class="block w-5/12 px-4 py-2 my-4 mx-4 text-lg font-medium leading-5 text-center text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-purple" type="submit" onclick="toggleModal('modal-validation-facture')">
+                                        Valider
+                                    </button>
+                                <?php } else { ?>
+                                    <button class="block w-5/12 px-4 py-2 my-4 mx-4 text-lg font-medium leading-5 text-center text-white bg-green-600 border border-transparent rounded-lg active:bg-green-600" type="button" disabled>
+                                        Valider
+                                    </button>
+                                <?php } ?>
                                 <button class="block w-5/12 px-4 py-2 my-4 mx-4 text-lg font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple" type="submit" onclick="toggleModal('modal-id')">
                                     Enregistrer
                                 </button>
