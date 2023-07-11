@@ -298,11 +298,8 @@ if (!(isset($_SESSION['IDFOURNISSEUR']))) {
                                 </div>
 
                                 <div>
-                                    <h4 class="py-4">VALIDÉ</h4>
-                                    <select class="w-11/12 rounded-lg border-2 border-black px-3 text-gray-700 h-10" name="Validé" required>
-                                        <option value="OUI" <?php echo ($facture[15] == true) ? "selected" : "" ?>>OUI</option>
-                                        <option value="NON" <?php echo ($facture[15] == false) ? "selected" : "" ?>>NON</option>
-                                    </select>
+                                    <h4 class="py-4">VALIDÉ PAR LE SERVICE DE FACTURATION</h4>
+                                    <input class="w-11/12 rounded-lg border-2 border-black px-3 text-gray-700 h-10" type="text" name="Validé" value="<?php echo $validé = $facture[15] ? "OUI" : "NON"; ?>" readonly>
                                 </div>
 
                                 <?php
